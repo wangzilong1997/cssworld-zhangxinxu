@@ -1,0 +1,56 @@
+<!--
+      @author wangzilong
+      @date 2019/11/27 11:01
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宽度分离原则：为了更好的维护</title>
+</head>
+<style>
+    .div1 {
+        width: 100px;
+        border: 1px solid;
+        height: 100px;
+    }
+    .div2 {
+        width: 100px;
+        border: 1px solid;
+        height: 100px;
+    }
+    .div3 {
+        width: 60px;
+        border: 1px solid;
+        padding: 20px;
+        height: 100px;
+    }
+    .div4 {
+        width: 102px;
+
+    }
+    .div4 > div {
+        border: 1px solid;
+        padding: 20px;
+        height: 102px;
+
+    }
+    /*想在原来部分留20px的空隙 div3是1的变形 div4是2的变形 2应用宽度分离原则 不用计算并且方便*/
+</style>
+<body>
+    <div class="div1">
+        <div>div1</div>
+    </div>
+    <div class="div2">
+        <div>div2</div>
+    </div>
+    <div class="div3">
+        <div>div1</div>
+    </div>
+    <div class="div4">
+        <div>div2</div>
+    </div>
+</body>
+</html>

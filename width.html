@@ -1,0 +1,35 @@
+<!--
+      @author wangzilong
+      @date 2019/11/27 10:31
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>width, padding, border同时存在的宽度表现实例页面</title>
+    <style>
+        .div {
+            width: 100px;
+            padding: 20px;
+            border: 20px solid;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = () => {
+            var eleShowWidth = document.getElementById('divWidth');
+            if(eleShowWidth){
+                eleShowWidth.innerHTML = eleShowWidth.parentNode.offsetWidth;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="div">
+        此时元素的offseWidth是:<span id="divWidth"></span>
+    </div>
+</body>
+
+</html>

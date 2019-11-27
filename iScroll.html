@@ -1,0 +1,47 @@
+<!--
+      @author wangzilong
+      @date 2019/11/27 10:09
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>“最大宽度”与iScroll水平滚动实例页面</title>
+    <style>
+        .wrap {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        .wrap > ul {
+            position: absolute;
+            white-space: nowrap;
+        }
+        .wrap li {
+            display: inline-block;
+        }
+    </style>
+    <script src="public/iScroll.js"></script>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <ul>
+            <li><img src="public/logo.png"></li>
+            <li><img src="public/logo.png"></li>
+            <li><img src="public/logo.png"></li>
+            <li><img src="public/logo.png"></li>
+            <li><img src="public/logo.png"></li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+    new IScroll('#wrap', {
+        scrollbars: true,
+        scrollX: true,
+        scrollY: false
+    });
+</script>
+</html>

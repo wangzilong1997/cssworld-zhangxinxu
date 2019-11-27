@@ -1,0 +1,42 @@
+<!--
+      @author wangzilong
+      @date 2019/11/27 9:49
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>“首选最小宽度”与凹凸效果实例页面</title>
+    <style>
+        .ao,
+        .tu {
+            display: inline-block;
+            width: 0;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 35px;
+            color: #fff;
+        }
+        .ao:before,
+        .tu:before {
+            outline: 2px solid #cd0000;
+            font-family: Consolas, Monaco, monospace;
+        }
+        .ao:before {
+            content: "love你love";
+        }
+        .tu {
+            direction: rtl;
+        }
+        .tu:before {
+            content: "我love你";
+        }
+    </style>
+</head>
+<body>
+<span class="ao"></span>
+<span class="tu"></span>
+</body>
+</html>
