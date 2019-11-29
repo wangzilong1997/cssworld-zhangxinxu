@@ -1,0 +1,79 @@
+<!--
+      @author wangzilong
+      @date 2019/11/29 14:43
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>src缺省时img元素的alt信息展示技术实例页面</title>
+    <style>
+        img {
+            display: inline-block;
+            width: 256px;
+            height: 192px;
+            color: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        img:not([src]){
+            visibility: hidden;
+        }
+        img::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f3f9;
+            visibility: visible;
+        }
+        img::after {
+            content: attr(alt);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            line-height: 30px;
+            background-color: rgba(0,0,0,.5);
+            color: white;
+            font-size: 14px;
+            transform: translateY(100%);
+            transition: transform .2s;
+            visibility: visible;
+        }
+        img:hover::after {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <img alt="美女沉思图" data-src="./public/logo.png">
+    <p><button>设置src属性显示图片</button></p>
+</body>
+<script type="text/javascript">
+    window.onload = () =>{
+        var eleButton = document.querySelector('button'),
+            eleImg = document.querySelector('img');
+
+        if (eleButton && eleImg ){
+            var initValueButton = eleButton.innerHTML;
+            var srcImage = eleImg.getAttribute('data-src');
+
+            eleImg.removeAttribute('data-src');
+
+            eleButton.addEventListener('click',function () {
+                if(this.innerHTML == initValueButton){
+                    this.innerHTML = "移除src属性";
+                    eleImg.setAttribute('src',srcImage);
+                }else {
+                    this.innerHTML = initValueButton;
+                    eleImg.removeAttribute('src');
+                }
+            })
+        }
+    }
+</script>
+</html>
