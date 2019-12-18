@@ -39,12 +39,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\cssowrd" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\cssowrd" />
       <recent name="C:\Users\Administrator\Desktop\cssowrd\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\cssowrd" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -75,7 +75,9 @@
       <workItem from="1574841104681" duration="2616000" />
       <workItem from="1575009815388" duration="6948000" />
       <workItem from="1575443839629" duration="1468000" />
-      <workItem from="1575529614988" duration="3440000" />
+      <workItem from="1575529614988" duration="4038000" />
+      <workItem from="1576641319033" duration="818000" />
+      <workItem from="1576650168982" duration="2653000" />
     </task>
     <servers />
   </component>
